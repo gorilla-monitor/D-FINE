@@ -6,7 +6,7 @@ __include__: [
   '../include/dfine_hgnetv2.yml',
 ]
 
-output_dir: ./output/dfine_hgnetv2_s_custom
+output_dir: /workspace/datasets/runs/dfine/spac/dfine_hgnetv2_s_custom
 
 
 DFINE:
@@ -49,9 +49,9 @@ optimizer:
 
 
 # Increase to search for the optimal ema
-epochs: 220
+epochs: 1
 train_dataloader:
-  total_batch_size: 64
+  total_batch_size: 16
   dataset:
     transforms:
       policy:
@@ -62,4 +62,4 @@ train_dataloader:
     base_size_repeat: 20
 
 val_dataloader:
-  total_batch_size: 128
+  total_batch_size: 16
