@@ -4,7 +4,7 @@ evaluator:
   type: CocoEvaluator
   iou_types: ['bbox', ]
 
-num_classes: 777 # your dataset classes
+num_classes: 1 # your dataset classes
 remap_mscoco_category: False
 
 train_dataloader:
@@ -14,9 +14,9 @@ train_dataloader:
     img_folder: /workspace/datasets/spac_coco_formatted/train
     ann_file: /workspace/datasets/spac_coco_formatted/annotations/instances_train.json
     return_masks: False
-    # transforms:
-    #   type: Compose
-    #   ops: ~
+    transforms:
+      type: Compose
+      ops: ~
   shuffle: True
   num_workers: 4
   drop_last: True
@@ -31,9 +31,9 @@ val_dataloader:
     img_folder: /workspace/datasets/spac_coco_formatted/valid
     ann_file: /workspace/datasets/spac_coco_formatted/annotations/instances_valid.json
     return_masks: False
-    # transforms:
-    #   type: Compose
-    #   ops: ~
+    transforms:
+      type: Compose
+      ops: ~
   shuffle: False
   num_workers: 4
   drop_last: False
