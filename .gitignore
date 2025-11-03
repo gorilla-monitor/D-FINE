@@ -6,5 +6,6 @@ wandb/
 *.onnx
 /wandb
 /datasets
+/models
 /scratch2
 
